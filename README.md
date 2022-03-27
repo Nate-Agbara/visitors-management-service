@@ -22,6 +22,10 @@ Add M2_HOME/bin to the execution path
 
 #### Docker commands - Steps to run the application
 Clone the project to your machine.
+##### Run the tests - Kindly ensure the database is up and listening and the 'visitorservice' schema is created as described down in this readme.
+``
+mvn test
+``
 ##### Build jar
 ``
 mvn package -DskipTests
@@ -53,6 +57,8 @@ Query OK, 0 rows affected, 1 warning (0.00 sec)
 mysql> CREATE database visitorservice;
 Query OK, 0 rows affected, 1 warning (0.00 sec)
 ``
+
+That's pretty much it. You can enter the shell of the running app to confirm it is running fine.
 ##### Enter the applications Docker container shell to confirm it is started fine
 ``
 docker exec -t -i visitorslog-docker /bin/bash
